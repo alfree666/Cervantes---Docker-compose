@@ -32,7 +32,7 @@ services:
         image: nginx:latest
         depends_on:
             - cervantes-app
-        restart: always
+        restart: unless-stopped
         ports:
             - "8200:80"
             - "8443:443"
